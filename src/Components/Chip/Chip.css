@@ -1,0 +1,17 @@
+.chip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient( 180deg, #2f781e 0%, #15570b 50% );
+    background-repeat: no-repeat;
+    border-color: 1px solid #373737;
+    border-radius: 15px;
+    width: 100px;
+    height: 32px;
+}
+
+.text-chip {
+    color: #ccc;
+    font-size: 14px;
+    text-transform: capitalize;
+}
