@@ -1,0 +1,21 @@
+.base-progreso {
+    background: #ccc !important;
+    border-color: 1px solid #373737;
+    border-radius: 5px;
+    width: 50%;
+    height: 10px;
+}
+
+.progreso {
+    position: relative;
+    height: 10px;
+    background: #60bb2b !important;
+    border-radius: 5px;
+    border-color: 1px solid #373737;
+}
+
+.text-progreso {
+    position: absolute;
+    font-size: 10px;
+    right: 0;
+}

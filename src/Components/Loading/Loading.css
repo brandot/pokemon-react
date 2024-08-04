@@ -1,0 +1,29 @@
+.loading {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading.isOpen {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-loading {
+    padding: 5px;
+    color: #b8b8b8;
+}
+
+.loading-container {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    overflow-y: auto;
+}
