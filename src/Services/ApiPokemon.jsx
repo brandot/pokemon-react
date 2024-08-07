@@ -24,7 +24,15 @@ const ApiPokemon = (initialUrl) => {
                     const item = response.data.results[index];
                     const pokemon = await service.get(`${item.url}`);
                     if (pokemon.status === 200 && pokemon.data) {
-                        pokemons.push(pokemon.data);
+                        const urlSpeciePokemon = `https://pokeapi.co/api/v2/pokemon-species/${pokemon.data.id}`;
+                        const speciePokemon = await service.get(urlSpeciePokemon);
+                        if (speciePokemon.status === 200 && speciePokemon.data) {
+                            pokemon.data.specie = {};
+                            pokemon.data.specie = speciePokemon.data;
+                            pokemons.push(pokemon.data);
+                        } else {
+                            pokemons.push(pokemon.data);
+                        }
                     }
                     if (index === response.data.results.length - 1) {
                         data.next = response.data.next;

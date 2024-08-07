@@ -1,6 +1,6 @@
 import React from 'react';
 import ApiPokemon from '../../Services/ApiPokemon';
-import './Home.css';
+import './Home.scss';
 import buttonLoad from '../../assets/loading-spokes.svg';
 import ProgressBar from '../../Components/ProgressBar/ProgressBar';
 import Loading from '../../Components/Loading/Loading';
@@ -20,7 +20,7 @@ const Home = () => {
             <div className='lista-pokemon'>
                 {data.pokemons?.length ? data.pokemons.map(item => {
                     return(
-                        <div className='tarjeta-pokemon' key={item.id}>
+                        <div className={`tarjeta-pokemon tarjeta-pokemon-${item.specie.color.name}`} key={item.id}>
                             <div className='dato-pokemon'>
                                 <span className='pokemon-name'>
                                     { item.name }
@@ -29,9 +29,9 @@ const Home = () => {
                             </div>
                             <img src={item.sprites.other.home.front_default} alt={ item.name } className='pokemon-img' />
                             <div className='detalle-pokemon'>
-                                {item.types?.length ? item.types.map(it => {
+                                {item.types?.length ? item.types.map((it, idx) => {
                                     return(
-                                        <Chip label={it.type.name} />
+                                        <Chip key={idx} label={it.type.name} color={item.specie.color.name} />
                                     )
                                 }) : null}
                             </div>
@@ -55,7 +55,7 @@ const Home = () => {
                                         <div className='detail-stat' key={idx}>
                                             <span className='item-detail-stat-name'>{it.stat.name}</span>
                                             <span className='item-detail-stat'>{it.base_stat}</span>
-                                            <ProgressBar base_stat={it.base_stat}/>
+                                            <ProgressBar base_stat={it.base_stat} color={item.specie.color.name}/>
                                         </div>
                                     )
                                 }) : null}
@@ -67,7 +67,7 @@ const Home = () => {
             <div className='load-more'>
                 <button className='button-pokemon' onClick={loadMorePokemons} disabled={loading}>
                     {loading && <img className='button-loading' src={buttonLoad} alt="" />}
-                    <span>LISTAR MAS POKEMONS</span>
+                    {!loading && <span>LISTAR MAS POKEMONS</span>}
                 </button>
             </div>
         </div>

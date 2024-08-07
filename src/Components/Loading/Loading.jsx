@@ -1,4 +1,4 @@
-import './Loading.css';
+import './Loading.scss';
 import loading from '../../assets/loading-spokes.svg';
 
 const Loading = () => {

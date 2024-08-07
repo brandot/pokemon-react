@@ -1,0 +1,66 @@
+@import '../../styles/colors';
+
+.chip-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: 1px solid $GRAY2;
+    border-radius: 5px;
+    width: 100px;
+    height: 32px;
+}
+
+.green {
+    background: $GREEN0;
+    color: $WHITE0;
+  }
+
+.red {
+    background: $RED0;
+    color: $WHITE0;
+}
+
+.yellow {
+    background: $YELLOW0;
+    color: $BLACK1;
+}
+
+.white {
+    background: $WHITE0;
+    color: $BLACK1;
+}
+
+.purple {
+    background: $PURPLE0;
+    color: $WHITE0;
+}
+
+.pink {
+    background: $PINK0;
+    color: $WHITE0;
+}
+
+.gray {
+    background: $GRAY2;
+    color: $WHITE0;
+}
+
+.brown {
+    background: $BROWN0;
+    color: $WHITE0;
+}
+
+.blue {
+    background: $BLUE0;
+    color: $WHITE0;
+}
+
+.black {
+    background: $BLACK1;
+    color: $WHITE0;
+}
+
+.text-chip {
+    font-size: 14px;
+    text-transform: capitalize;
+}

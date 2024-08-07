@@ -1,0 +1,60 @@
+@import '../../styles/colors';
+
+.base-progreso {
+    background: $GRAY6 !important;
+    border-color: 1px solid $GRAY1;
+    width: 50%;
+    height: 10px;
+}
+
+.progreso {
+    position: relative;
+    height: 10px;
+    border-color: 1px solid $GRAY1;
+}
+
+.text-progreso {
+    position: absolute;
+    font-size: 10px;
+    right: 0;
+}
+
+.green {
+    background: $GREEN1;
+  }
+
+.red {
+    background: $RED0;
+}
+
+.yellow {
+    background: $YELLOW0;
+}
+
+.white {
+    background: $WHITE0;
+}
+
+.purple {
+    background: $PURPLE0;
+}
+
+.pink {
+    background: $PINK0;
+}
+
+.gray {
+    background: $GRAY2;
+}
+
+.brown {
+    background: $BROWN0;
+}
+
+.blue {
+    background: $BLUE0;
+}
+
+.black {
+    background: $BLACK1;
+}
